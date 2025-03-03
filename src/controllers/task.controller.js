@@ -6,7 +6,7 @@ class TaskController {
         this.res = res;
     }
 
-    async getTasks() {
+    async getAll() {
         try {
             const tasks = await TaskModel.find({});
             this.res.status(200).send(tasks);
@@ -15,7 +15,7 @@ class TaskController {
         }
     }
 
-    async getTaskById() {
+    async getById() {
         try {
             const taskId = this.req.params.id;
 
@@ -33,7 +33,7 @@ class TaskController {
         }
     }
 
-    async PostTasks() {
+    async create() {
         try {
             const newTask = new TaskModel(this.req.body);
 
