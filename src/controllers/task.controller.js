@@ -62,7 +62,7 @@ class TaskController {
                 return notFoundError(this.res);
             }
 
-            const allowedUpdates = ["isCompleted"];
+            const allowedUpdates = ["iscompleted"];
             const requestedUpdates = Object.keys(this.req.body);
 
             for (const update of requestedUpdates) {
